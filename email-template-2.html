@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to the BudgetByMe Waitlist!</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f8fafc;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        img {
+            border: 0;
+            display: block;
+            outline: none;
+            text-decoration: none;
+            height: auto;
+            width: 100%;
+            font-size: 13px;
+        }
+        
+        /* Container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header */
+        .email-header {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .logo-container {
+            margin-bottom: 1.5rem;
+        }
+        
+        .email-title {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        
+        .email-subtitle {
+            color: #ECFDF5;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Content */
+        .email-content {
+            padding: 2rem;
+        }
+        
+        .welcome-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            color: #059669;
+            font-weight: 600;
+        }
+        
+        /* Features section */
+        .features-preview {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 12px;
+        }
+        
+        .features-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: #ECFDF5;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .feature-text h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+        
+        .feature-text p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        /* Call to action */
+        .cta-section {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #ECFDF5;
+            border-radius: 12px;
+            border: 1px solid #D1FAE5;
+        }
+        
+        .cta-text {
+            font-size: 1rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #059669;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.875rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #047857;
+        }
+        
+        /* Timeline */
+        .timeline-section {
+            margin: 2rem 0;
+        }
+        
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        
+        .timeline-step {
+            width: 24px;
+            height: 24px;
+            background: #059669;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .timeline-text {
+            font-size: 0.9rem;
+            color: #1f2937;
+        }
+        
+        /* Footer */
+        .email-footer {
+            background: #1f2937;
+            color: #9ca3af;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-text {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .unsubscribe {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        
+        .unsubscribe a {
+            color: #6b7280;
+            text-decoration: underline;
+        }
+        
+        /* Mobile responsive */
+        @media screen and (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .email-header {
+                padding: 1.5rem;
+            }
+            
+            .email-title {
+                font-size: 1.5rem;
+            }
+            
+            .email-content {
+                padding: 1.5rem;
+            }
+            
+            .features-preview {
+                padding: 1rem;
+            }
+            
+            .cta-section {
+                padding: 1rem;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .email-container {
+                background-color: #1f2937;
+            }
+            
+            .email-content {
+                color: #f9fafb;
+            }
+            
+            .welcome-text {
+                color: #f9fafb;
+            }
+            
+            .feature-item {
+                background: #374151;
+            }
+            
+            .feature-text h4 {
+                color: #f9fafb;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 20px; background-color: #f8fafc;">
+    <div class="email-container">
+        <!-- Header -->
+        <div class="email-header">
+            <div class="logo-container">
+                <svg width="120" height="41" viewBox="0 0 120 41" style="margin: 0 auto;">
+                    <!-- Green circle background -->
+                    <circle cx="20.5" cy="20.5" r="19" fill="#ECFDF5"/>
+                    
+                    <!-- Letter "B" -->
+                    <path d="M14.4 12.3 L14.4 28.7 L20.5 28.7 Q24.6 28.7 24.6 24.6 Q24.6 20.5 20.5 20.5 L14.4 20.5 M14.4 20.5 L19.5 20.5 Q22.6 20.5 22.6 16.4 Q22.6 12.3 19.5 12.3 L14.4 12.3" fill="#059669" stroke="none"/>
+                    
+                    <!-- Progress bars -->
+                    <rect x="26.6" y="16.4" width="4.1" height="2" fill="#ECFDF5" rx="1"/>
+                    <rect x="26.6" y="20.5" width="6.1" height="2" fill="#ECFDF5" rx="1"/>
+                    <rect x="26.6" y="24.6" width="3.1" height="2" fill="#ECFDF5" rx="1"/>
+                    
+                    <!-- Text -->
+                    <text x="46" y="16.4" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="-0.025em">Budget</text>
+                    <text x="46" y="30.7" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#ECFDF5" letter-spacing="0.025em">By Me</text>
+                </svg>
+            </div>
+            <h1 class="email-title">You're on the waitlist!</h1>
+            <p class="email-subtitle">Get ready to budget life's special moments with confidence</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="email-content">
+            <div class="welcome-text">
+                <p>Hi there!</p>
+                
+                <p>Thank you for joining the <span class="highlight">BudgetByMe waitlist</span>! We're excited to help you plan and budget for life's most important celebrations - from weddings to graduations, birthdays to anniversaries.</p>
+                
+                <p>You're now among the first to know when BudgetByMe launches, and you'll get exclusive early access to features that will transform how you budget for special events.</p>
+            </div>
+            
+            <!-- Features Preview -->
+            <div class="features-preview">
+                <h2 class="features-title">What to Expect</h2>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="6" fill="none" stroke="#059669" stroke-width="1.5"/>
+                                <path d="M6 8 L7 9 L10 6" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Real-time Budget Tracking</h4>
+                            <p>Never go over budget with smart alerts and visual dashboards</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="2" fill="none" stroke="#059669" stroke-width="1.5"/>
+                                <path d="M6 7 L8 9 L12 5" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Smart Payment Scheduling</h4>
+                            <p>Schedule vendor payments and never miss a deadline</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="3" y="5" width="10" height="6" rx="1" fill="none" stroke="#059669" stroke-width="1.5"/>
+                                <path d="M5 7 L7 7 M5 9 L11 9" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Document Management</h4>
+                            <p>Store receipts, contracts, and organize all event paperwork</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="timeline-section">
+                <h3 class="timeline-title">What happens next?</h3>
+                <div class="timeline-item">
+                    <div class="timeline-step">1</div>
+                    <div class="timeline-text">We'll send you exclusive updates on our development progress</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-step">2</div>
+                    <div class="timeline-text">You'll get early access before the public launch</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-step">3</div>
+                    <div class="timeline-text">Start budgeting your special events with confidence!</div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <p class="cta-text">Want to learn more about event budgeting? Check out our blog for tips and insights.</p>
+                <a href="#" class="cta-button">Read Our Blog</a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="email-footer">
+            <p class="footer-text">
+                © 2025 BudgetByMe. All rights reserved.<br>
+                Helping you budget life's special moments.
+            </p>
+            
+            <div class="social-links">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a> |
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <p class="unsubscribe">
+                You received this email because you joined our waitlist.<br>
+                <a href="#">Unsubscribe</a> | <a href="#">Update Preferences</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "budgetbyme-website",
+  "version": "1.0.0",
+  "description": "Static landing page for BudgetByMe",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

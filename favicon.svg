@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green circle background -->
+  <circle cx="32" cy="32" r="30" fill="#059669"/>
+  
+  <!-- Letter "B" -->
+  <path d="M22.4 19.2 L22.4 44.8 L32 44.8 Q38.4 44.8 38.4 38.4 Q38.4 32 32 32 L22.4 32 M22.4 32 L30.4 32 Q35.2 32 35.2 25.6 Q35.2 19.2 30.4 19.2 L22.4 19.2" fill="#F0FDF4" stroke="none"/>
+  
+  <!-- Progress bars -->
+  <rect x="41.6" y="25.6" width="6.4" height="3.2" fill="#F0FDF4" rx="1.6"/>
+  <rect x="41.6" y="32" width="9.6" height="3.2" fill="#F0FDF4" rx="1.6"/>
+  <rect x="41.6" y="38.4" width="4.8" height="3.2" fill="#F0FDF4" rx="1.6"/>
+</svg>

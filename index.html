@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Life's Special Moments - Wedding & Event Budget Planner | BudgetByMe</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Professional wedding budget planner and event budgeting app for celebrations. Track expenses, schedule payments, and manage receipts for weddings, graduations, and special events.">
+    <meta name="keywords" content="wedding budget planner, event budgeting app, celebration budget tracker, wedding expense tracker, graduation budget, birthday party budget, anniversary planning">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://budgetbyme.app/">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Budget Life's Special Moments - Wedding & Event Budget Planner | BudgetByMe">
+    <meta property="og:description" content="Professional wedding budget planner and event budgeting app for celebrations. Track expenses, schedule payments, and manage receipts for weddings, graduations, and special events.">
+    <meta property="og:url" content="https://budgetbyme.app/">
+    <meta property="og:site_name" content="BudgetByMe">
+    <meta property="og:image" content="https://budgetbyme.app/images/budgetbyme-social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Budget Life's Special Moments - Wedding & Event Budget Planner | BudgetByMe">
+    <meta name="twitter:description" content="Professional wedding budget planner and event budgeting app for celebrations. Track expenses, schedule payments, and manage receipts.">
+    <meta name="twitter:image" content="https://budgetbyme.app/images/budgetbyme-social-preview.jpg">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "BudgetByMe",
+        "description": "Professional wedding budget planner and event budgeting app for celebrations including weddings, graduations, birthdays, and anniversaries.",
+        "url": "https://budgetbyme.app",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": ["iOS", "Android", "Web"],
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "BudgetByMe"
+        },
+        "keywords": "wedding budget planner, event budgeting, celebration planning, expense tracking",
+        "featureList": [
+            "Real-time budget tracking",
+            "Payment scheduling",
+            "Document management",
+            "Expense categorization",
+            "Visual budget dashboards"
+        ]
+    }
+    </script>
+    
+    <!-- Performance optimizations -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon and app icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#059669">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <svg width="140" height="48" viewBox="0 0 140 48" class="logo-svg" role="img" aria-labelledby="logo-title">
+                        <title id="logo-title">BudgetByMe - Budget Life's Special Moments</title>
+                        <!-- Green circle background -->
+                        <circle cx="24" cy="24" r="22" fill="#059669"/>
+                        
+                        <!-- Letter "B" -->
+                        <path d="M16.8 14.4 L16.8 33.6 L24 33.6 Q28.8 33.6 28.8 28.8 Q28.8 24 24 24 L16.8 24 M16.8 24 L22.8 24 Q26.4 24 26.4 19.2 Q26.4 14.4 22.8 14.4 L16.8 14.4" fill="#F0FDF4" stroke="none"/>
+                        
+                        <!-- Progress bars -->
+                        <rect x="31.2" y="19.2" width="4.8" height="2.4" fill="#F0FDF4" rx="1.2"/>
+                        <rect x="31.2" y="24" width="7.2" height="2.4" fill="#F0FDF4" rx="1.2"/>
+                        <rect x="31.2" y="28.8" width="3.6" height="2.4" fill="#F0FDF4" rx="1.2"/>
+                        
+                        <!-- Text -->
+                        <text x="54" y="19.2" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#1F2937" letter-spacing="-0.025em">Budget</text>
+                        <text x="54" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#6B7280" letter-spacing="0.025em">By Me</text>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Budget Life's <span class="highlight">Special Moments</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Professional budgeting app for weddings, graduations, birthdays, and anniversary celebrations. Track expenses, schedule vendor payments, and manage event budgets with real-time dashboards. 
+                        Turn celebration planning stress into organized financial success.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="cta-button" id="join-waitlist-btn">
+                            Join the Waitlist - It's Free
+                        </button>
+                        <p class="cta-note">Be the first to get early access</p>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="screenshot-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide active" data-slide="1">
+                                    <img src="images/dashboard.png" alt="Dashboard Overview - Track your progress and manage your budget with real-time gauge charts and financial metrics" class="screenshot-img">
+                                    <div class="slide-caption">
+                                        <h4>Dashboard Overview</h4>
+                                        <p>Track your progress and manage your budget with real-time gauge charts and financial metrics</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide" data-slide="2">
+                                    <img src="images/category.png" alt="Category Management - Organize expenses by categories like Food & Drinks with detailed progress tracking" class="screenshot-img">
+                                    <div class="slide-caption">
+                                        <h4>Category Management</h4>
+                                        <p>Organize expenses by categories with detailed progress tracking and payment status</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide" data-slide="3">
+                                    <img src="images/payment.png" alt="Payment Processing - Mark payments as complete with receipt uploads and detailed payment information" class="screenshot-img">
+                                    <div class="slide-caption">
+                                        <h4>Payment Processing</h4>
+                                        <p>Mark payments as complete with receipt uploads and detailed payment information</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="carousel-controls">
+                                <button class="carousel-btn carousel-prev" aria-label="Previous screenshot">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="carousel-btn carousel-next" aria-label="Next screenshot">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="carousel-indicators">
+                                <button class="indicator active" data-slide="1" aria-label="Go to slide 1"></button>
+                                <button class="indicator" data-slide="2" aria-label="Go to slide 2"></button>
+                                <button class="indicator" data-slide="3" aria-label="Go to slide 3"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Event Budget Management Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" role="img" aria-labelledby="budget-tracking-icon">
+                                <title id="budget-tracking-icon">Real-time budget tracking feature icon</title>
+                                <circle cx="20" cy="20" r="18" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+                                <path d="M15 20 L18 23 L25 16" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Real-Time Budget Tracking</h3>
+                        <p class="feature-description">
+                            Visual dashboards with gauge charts show your budget health instantly. Track actual vs planned spending with professional precision.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" role="img" aria-labelledby="payment-scheduling-icon">
+                                <title id="payment-scheduling-icon">Smart payment scheduling feature icon</title>
+                                <rect x="6" y="8" width="28" height="24" rx="3" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+                                <path d="M14 18 L18 22 L26 14" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Smart Payment Scheduling</h3>
+                        <p class="feature-description">
+                            Schedule vendor payments with ASAP, On-The-Day, or custom dates. Never miss a payment with automated reminders.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" role="img" aria-labelledby="document-management-icon">
+                                <title id="document-management-icon">Receipt and document management feature icon</title>
+                                <rect x="8" y="12" width="24" height="16" rx="2" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+                                <path d="M12 18 L16 18 M12 22 L28 22" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Receipt & Document Management</h3>
+                        <p class="feature-description">
+                            Store vendor contracts, receipts, and payment documentation. Everything organized by event and category.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rotating-value-props">
+            <div class="container">
+                <div class="rotation-container">
+                    <div class="rotation-controls">
+                        <div class="rotation-indicators">
+                            <button class="rotation-indicator active" data-section="1" aria-label="Budget protection">
+                                <span class="indicator-label">Budget Protection</span>
+                            </button>
+                            <button class="rotation-indicator" data-section="2" aria-label="Long-term planning">
+                                <span class="indicator-label">Long-term Planning</span>
+                            </button>
+                            <!--
+                            <button class="rotation-indicator" data-section="3" aria-label="Collaboration">
+                                <span class="indicator-label">Collaboration</span>
+                            </button>
+                            <button class="rotation-indicator" data-section="4" aria-label="Professional tools">
+                                <span class="indicator-label">Professional Tools</span>
+                            </button>
+                            -->
+                            <button class="rotation-indicator" data-section="5" aria-label="Budget confidence">
+                                <span class="indicator-label">Budget Confidence</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="rotation-sections">
+                        <!-- Section 1: Never Go Over Budget -->
+                        <div class="rotation-section active" data-section="1">
+                            <div class="value-content">
+                                <div class="value-text">
+                                    <span class="value-badge">Budget Protection</span>
+                                    <h2 class="value-title">Never Go Over Budget Again</h2>
+                                    <p class="value-description">
+                                        Smart alerts and real-time monitoring keep your celebration dreams within reach. 
+                                        Our predictive analytics catch overspending before it happens, giving you complete financial control.
+                                    </p>
+                                    <div class="value-features">
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">🚨</div>
+                                            <div class="value-feature-text">
+                                                <h4>Real-time Spending Alerts</h4>
+                                                <p>Get notified when approaching category limits</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">📊</div>
+                                            <div class="value-feature-text">
+                                                <h4>Budget Health Scoring</h4>
+                                                <p>0-100 scale shows your financial safety level</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">🔮</div>
+                                            <div class="value-feature-text">
+                                                <h4>Predictive Warnings</h4>
+                                                <p>See potential overspend before it happens</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="value-visual">
+                                    <div class="stat-card">
+                                        <div class="stat-header">
+                                            <h3>Budget Protection Results</h3>
+                                        </div>
+                                        <div class="stat-items">
+                                            <div class="stat-item">
+                                                <span class="stat-number">95%</span>
+                                                <span class="stat-label">Users stay on budget</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">$1,200</span>
+                                                <span class="stat-label">Average savings vs original plan</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-number">72hrs</span>
+                                                <span class="stat-label">Average warning time</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 2: Plan Months Ahead -->
+                        <div class="rotation-section" data-section="2">
+                            <div class="value-content">
+                                <div class="value-text">
+                                    <span class="value-badge">Long-term Planning</span>
+                                    <h2 class="value-title">Plan Months Ahead</h2>
+                                    <p class="value-description">
+                                        From engagement to wedding day, budget your entire journey. Timeline forecasting and milestone tracking 
+                                        help you plan celebrations months or years in advance with confidence.
+                                    </p>
+                                    <div class="value-features">
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">📈</div>
+                                            <div class="value-feature-text">
+                                                <h4>Timeline Forecasting</h4>
+                                                <p>Budget progression over months</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">🎯</div>
+                                            <div class="value-feature-text">
+                                                <h4>Savings Milestones</h4>
+                                                <p>Track progress toward your celebration goals</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">⏰</div>
+                                            <div class="value-feature-text">
+                                                <h4>Payment Scheduling</h4>
+                                                <p>Align expenses with your event timeline</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="value-visual">
+                                    <div class="timeline-card">
+                                        <div class="timeline-header">
+                                            <h3>Wedding Planning Timeline</h3>
+                                        </div>
+                                        <div class="timeline-items">
+                                            <div class="timeline-item">
+                                                <span class="timeline-date">12 months</span>
+                                                <span class="timeline-task">Venue & catering deposits</span>
+                                                <span class="timeline-amount">$3,500</span>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <span class="timeline-date">6 months</span>
+                                                <span class="timeline-task">Photography & flowers</span>
+                                                <span class="timeline-amount">$2,800</span>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <span class="timeline-date">2 months</span>
+                                                <span class="timeline-task">Final payments</span>
+                                                <span class="timeline-amount">$4,200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 3: Share & Collaborate -->
+                        <div class="rotation-section" data-section="3">
+                            <div class="value-content">
+                                <div class="value-text">
+                                    <span class="value-badge">Collaboration</span>
+                                    <h2 class="value-title">Share & Collaborate</h2>
+                                    <p class="value-description">
+                                        Plan together, stay aligned, celebrate together. Real-time collaboration lets couples, families, 
+                                        and event committees work on budgets simultaneously with shared access and notifications.
+                                    </p>
+                                    <div class="value-features">
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">👫</div>
+                                            <div class="value-feature-text">
+                                                <h4>Multi-User Access</h4>
+                                                <p>Multiple people can edit the same budget</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">🔒</div>
+                                            <div class="value-feature-text">
+                                                <h4>Permission Levels</h4>
+                                                <p>Control who can view, edit, or manage</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">🔔</div>
+                                            <div class="value-feature-text">
+                                                <h4>Shared Notifications</h4>
+                                                <p>Everyone stays updated on budget changes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="value-visual">
+                                    <div class="collab-card">
+                                        <div class="collab-header">
+                                            <h3>Active Collaborators</h3>
+                                        </div>
+                                        <div class="collab-users">
+                                            <div class="collab-user">
+                                                <div class="user-avatar">👰</div>
+                                                <div class="user-info">
+                                                    <span class="user-name">Sarah</span>
+                                                    <span class="user-role">Admin</span>
+                                                </div>
+                                                <div class="user-status online">●</div>
+                                            </div>
+                                            <div class="collab-user">
+                                                <div class="user-avatar">🤵</div>
+                                                <div class="user-info">
+                                                    <span class="user-name">Mike</span>
+                                                    <span class="user-role">Editor</span>
+                                                </div>
+                                                <div class="user-status online">●</div>
+                                            </div>
+                                            <div class="collab-user">
+                                                <div class="user-avatar">👩</div>
+                                                <div class="user-info">
+                                                    <span class="user-name">Mom</span>
+                                                    <span class="user-role">Viewer</span>
+                                                </div>
+                                                <div class="user-status offline">●</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 4: Professional Results -->
+                        <div class="rotation-section" data-section="4">
+                            <div class="value-content">
+                                <div class="value-text">
+                                    <span class="value-badge">Professional Tools</span>
+                                    <h2 class="value-title">Professional Results Without the Cost</h2>
+                                    <p class="value-description">
+                                        Get the same sophisticated planning tools used by professional event planners, 
+                                        but designed for regular people at a fraction of the cost.
+                                    </p>
+                                    <div class="value-features">
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">🏆</div>
+                                            <div class="value-feature-text">
+                                                <h4>Industry-Standard Templates</h4>
+                                                <p>Proven budget structures from top planners</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">📋</div>
+                                            <div class="value-feature-text">
+                                                <h4>Professional Workflows</h4>
+                                                <p>Step-by-step processes used by experts</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">📊</div>
+                                            <div class="value-feature-text">
+                                                <h4>Advanced Analytics</h4>
+                                                <p>Professional-level reporting and insights</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="value-visual">
+                                    <div class="cost-comparison">
+                                        <div class="comparison-header">
+                                            <h3>Cost Comparison</h3>
+                                        </div>
+                                        <div class="comparison-items">
+                                            <div class="comparison-option">
+                                                <div class="option-title">Professional Planner</div>
+                                                <div class="option-price">$3,500+</div>
+                                                <div class="option-features">
+                                                    <span>✓ Professional expertise</span>
+                                                    <span>✓ Custom planning</span>
+                                                    <span>✓ Full-service support</span>
+                                                </div>
+                                            </div>
+                                            <div class="comparison-vs">VS</div>
+                                            <div class="comparison-option highlight">
+                                                <div class="option-title">BudgetByMe</div>
+                                                <div class="option-price">$29/year</div>
+                                                <div class="option-features">
+                                                    <span>✓ Professional tools</span>
+                                                    <span>✓ Expert templates</span>
+                                                    <span>✓ 24/7 availability</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 5: Budget Confidence -->
+                        <div class="rotation-section" data-section="5">
+                            <div class="value-content">
+                                <div class="value-text">
+                                    <span class="value-badge">Peace of Mind</span>
+                                    <h2 class="value-title">Turn Budget Stress Into Budget Confidence</h2>
+                                    <p class="value-description">
+                                        Stop worrying about money and start enjoying your celebration planning. 
+                                        Clear visibility and complete control transform financial anxiety into confident decision-making.
+                                    </p>
+                                    <div class="value-features">
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">👁️</div>
+                                            <div class="value-feature-text">
+                                                <h4>Complete Visibility</h4>
+                                                <p>See every dollar and decision clearly</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">🎯</div>
+                                            <div class="value-feature-text">
+                                                <h4>Full Control</h4>
+                                                <p>Make informed decisions with real data</p>
+                                            </div>
+                                        </div>
+                                        <div class="value-feature">
+                                            <div class="value-feature-icon">😌</div>
+                                            <div class="value-feature-text">
+                                                <h4>Peace of Mind</h4>
+                                                <p>Focus on joy, not financial stress</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="value-visual">
+                                    <div class="confidence-card">
+                                        <div class="confidence-header">
+                                            <h3>User Confidence Metrics</h3>
+                                        </div>
+                                        <div class="confidence-stats">
+                                            <div class="confidence-stat">
+                                                <div class="stat-circle">
+                                                    <span class="stat-percent">92%</span>
+                                                </div>
+                                                <span class="stat-description">Feel more confident about their budget</span>
+                                            </div>
+                                            <div class="confidence-stat">
+                                                <div class="stat-circle">
+                                                    <span class="stat-percent">87%</span>
+                                                </div>
+                                                <span class="stat-description">Enjoy planning process more</span>
+                                            </div>
+                                            <div class="confidence-stat">
+                                                <div class="stat-circle">
+                                                    <span class="stat-percent">94%</span>
+                                                </div>
+                                                <span class="stat-description">Would recommend to others</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="waitlist" id="waitlist-section">
+            <div class="container">
+                <div class="waitlist-content">
+                    <h2 class="waitlist-title">Start Planning Your Event Budget</h2>
+                    <p class="waitlist-subtitle">
+                        Join early access and get professional-grade budgeting tools designed specifically for life's special moments.
+                    </p>
+                    <form class="waitlist-form" id="waitlist-form">
+                        <div class="form-group">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Enter your email address" 
+                                required
+                                class="form-input"
+                            >
+                            <button type="submit" class="form-button">
+                                Join Waitlist
+                            </button>
+                        </div>
+                        <p class="form-note">
+                            No spam, ever. Unsubscribe anytime.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2025 BudgetByMe. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">✅</div>
+                <h3 class="modal-title">You're on the list!</h3>
+                <p class="modal-text">
+                    We'll notify you as soon as early access is available. 
+                    Get ready to plan amazing celebrations!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
