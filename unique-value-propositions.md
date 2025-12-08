@@ -29,7 +29,7 @@ Analysis of potential unique value propositions to further differentiate BudgetB
 
 ---
 
-### 2. "Plan Years Ahead"
+### 2. "Plan Months Ahead"
 **Focus**: Long-term event planning capability
 
 **Pain Point**: Events planned 1-2 years in advance need ongoing budget management
@@ -193,7 +193,7 @@ Analysis of potential unique value propositions to further differentiate BudgetB
 
 If "Never Go Over Budget Again" doesn't resonate, the next best options would be:
 
-1. **"Plan Years Ahead"** - Good for engagement/wedding market
+1. **"Plan Months Ahead"** - Good for engagement/wedding market
 2. **"Professional Results Without the Cost"** - Appeals to value-conscious users
 3. **"Share & Collaborate"** - Strong for couple/family market
 
