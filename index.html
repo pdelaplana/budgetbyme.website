@@ -57,9 +57,22 @@
         ]
     }
     </script>
-    
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BudgetByMe",
+        "url": "https://budgetbyme.app",
+        "logo": "https://budgetbyme.app/favicon.svg",
+        "description": "Professional wedding budget planner and event budgeting app for celebrations"
+    }
+    </script>
+
     <!-- Performance optimizations -->
     <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="images/dashboard.png" as="image">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,7 +100,7 @@
                         <text x="54" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#6B7280" letter-spacing="0.025em">By Me</text>
                     </svg>
             </div>
-            <a href="https://budgetbyme.vercel.app/signup" target="_blank" class="btn btn-primary">Get Early Access</a>
+            <a href="https://budgetbyme.vercel.app/signup" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Get Early Access</a>
         </nav>
     </header>
 
@@ -106,22 +119,22 @@
                     <div class="carousel-track-container">
                         <ul class="carousel-track">
                             <li class="carousel-slide current-slide">
-                                <img src="images/dashboard.png" alt="Budget Dashboard">
+                                <img src="images/dashboard.png" alt="Budget Dashboard - Track your wedding and event budget progress with visual gauges" width="600" height="1067" loading="eager">
                             </li>
                             <li class="carousel-slide">
-                                <img src="images/payment-timeline.png" alt="Payment Scheduling">
+                                <img src="images/payment-timeline.png" alt="Payment Scheduling - Schedule vendor payments with automated reminders" width="600" height="1067" loading="lazy">
                             </li>
                             <li class="carousel-slide">
-                                <img src="images/category.png" alt="Category Management">
+                                <img src="images/category.png" alt="Category Management - Organize expenses by venue, catering, photography and more" width="600" height="1067" loading="lazy">
                             </li>
                             <li class="carousel-slide">
-                                <img src="images/expense.png" alt="Expense Management">
+                                <img src="images/expense.png" alt="Expense Management - Track all event expenses in one place" width="600" height="1067" loading="lazy">
                             </li>
                             <li class="carousel-slide">
-                                <img src="images/payment.png" alt="Payment">
+                                <img src="images/payment.png" alt="Payment Tracking - Monitor vendor payments and deposits" width="600" height="1067" loading="lazy">
                             </li>
                             <li class="carousel-slide">
-                                <img src="images/create-event.png" alt="Create Event">
+                                <img src="images/create-event.png" alt="Create Event - Start planning your wedding, graduation, or birthday celebration" width="600" height="1067" loading="lazy">
                             </li>
                         </ul>
                     </div>
@@ -135,7 +148,7 @@
                     </div>
                 </div>
                 <div class="hero-cta-group">
-                    <a href="https://budgetbyme.vercel.app/signup" target="_blank" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.125rem;">
+                    <a href="https://budgetbyme.vercel.app/signup" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.125rem;">
                         Get Early Access
                     </a>
                     <div class="social-proof-text">
@@ -306,10 +319,13 @@
                 <p style="opacity: 0.8; margin-top: 0.5rem;">Help us improve BudgetByMe with your thoughts and suggestions.</p>
                 <form class="feedback-form" id="feedback-form" action="javascript:void(0);">
                     <div class="form-row">
-                        <input type="text" name="name" placeholder="Your Name" required class="feedback-input">
-                        <input type="email" name="email" placeholder="Your Email" required class="feedback-input">
+                        <label for="feedback-name" class="visually-hidden">Your Name</label>
+                        <input type="text" id="feedback-name" name="name" placeholder="Your Name" required class="feedback-input">
+                        <label for="feedback-email" class="visually-hidden">Your Email</label>
+                        <input type="email" id="feedback-email" name="email" placeholder="Your Email" required class="feedback-input">
                     </div>
-                    <textarea name="message" placeholder="Share your feedback, suggestions, or feature requests..." required class="feedback-textarea" rows="5"></textarea>
+                    <label for="feedback-message" class="visually-hidden">Your Feedback</label>
+                    <textarea id="feedback-message" name="message" placeholder="Share your feedback, suggestions, or feature requests..." required class="feedback-textarea" rows="5"></textarea>
                     <button type="submit" class="btn btn-primary">Send Feedback</button>
                 </form>
             </div>
