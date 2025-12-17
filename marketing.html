@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetByMe - Marketing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #dcfce7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .marketing-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Left side - Text content */
+        .content-side {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-icon {
+            width: 56px;
+            height: 56px;
+            background: #059669;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+
+        .brand-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .brand-text {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #1f2937;
+            letter-spacing: -0.02em;
+        }
+
+        .headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #1f2937;
+            letter-spacing: -0.03em;
+        }
+
+        .headline .highlight {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Value Props */
+        .value-props {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .value-prop {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(5, 150, 105, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-prop:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(5, 150, 105, 0.12);
+        }
+
+        .value-prop-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-prop-icon svg {
+            width: 28px;
+            height: 28px;
+            color: #059669;
+        }
+
+        .value-prop-content h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        .value-prop-content p {
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Right side - Laptop mockup */
+        .visual-side {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .laptop-mockup {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        /* Screen/Lid */
+        .laptop-screen {
+            background: linear-gradient(180deg, #1c1917 0%, #0c0a09 100%);
+            border-radius: 14px 14px 0 0;
+            padding: 10px 10px 6px 10px;
+            position: relative;
+            box-shadow:
+                0 -2px 20px rgba(0, 0, 0, 0.3),
+                inset 0 0 0 1px rgba(255,255,255,0.05);
+        }
+
+        .laptop-screen::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: #27272a;
+            border-radius: 50%;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .screen-content {
+            background: #0c0a09;
+            border-radius: 3px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            box-shadow:
+                inset 0 0 0 1px rgba(255,255,255,0.03),
+                0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .screen-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .dashboard-image {
+            max-width: 100%;
+        }
+
+        /* Hinge */
+        .laptop-hinge {
+            height: 8px;
+            background: linear-gradient(to bottom, #1a202c 0%, #78716c 30%, #a8a29e 70%, #d6d3d1 100%);
+            margin: 0 5%;
+        }
+
+        /* MacBook Keyboard Base */
+        .laptop-keyboard {
+            background: linear-gradient(180deg, #e7e5e4 0%, #d6d3d1 50%, #a8a29e 100%);
+            border-radius: 0 0 16px 16px;
+            padding: 8px 12px 14px 12px;
+            position: relative;
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.25),
+                inset 0 1px 0 rgba(255,255,255,0.6);
+            margin: 0 -3%;
+        }
+
+        /* Speaker grilles */
+        .speaker-grilles {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            padding: 0 8px;
+        }
+
+        .speaker {
+            display: flex;
+            gap: 3px;
+        }
+
+        .speaker-hole {
+            width: 2px;
+            height: 2px;
+            background: #57534e;
+            border-radius: 50%;
+        }
+
+        /* Keyboard keys */
+        .keyboard-keys {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-bottom: 8px;
+            padding: 0 2%;
+        }
+
+        .keyboard-row {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+        }
+
+        .key {
+            background: linear-gradient(180deg, #1c1917 0%, #0c0a09 100%);
+            border-radius: 3px;
+            height: 22px;
+            flex: 1;
+            max-width: 32px;
+            box-shadow:
+                0 1px 0 #44403c,
+                0 2px 2px rgba(0,0,0,0.2),
+                inset 0 1px 0 rgba(255,255,255,0.03);
+        }
+
+        .key.fn {
+            max-width: 32px;
+            height: 16px;
+        }
+
+        .key.wide {
+            max-width: 42px;
+        }
+
+        .key.wider {
+            max-width: 52px;
+        }
+
+        .key.tab {
+            max-width: 48px;
+        }
+
+        .key.caps {
+            max-width: 58px;
+        }
+
+        .key.shift {
+            max-width: 76px;
+        }
+
+        .key.shift-right {
+            max-width: 76px;
+        }
+
+        .key.spacebar {
+            max-width: 180px;
+            flex: 5;
+        }
+
+        .key.cmd {
+            max-width: 40px;
+        }
+
+        .key.return {
+            max-width: 58px;
+        }
+
+        /* Arrow keys cluster */
+        .arrow-keys {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            margin-left: 2px;
+        }
+
+        .arrow-row {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+        }
+
+        .key.arrow {
+            max-width: 28px;
+            height: 10px;
+        }
+
+        .key.arrow.full {
+            height: 22px;
+        }
+
+        /* Trackpad */
+        .trackpad {
+            width: 55%;
+            height: 75px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #d6d3d1 0%, #c4c1bf 100%);
+            border-radius: 8px;
+            box-shadow:
+                inset 0 0 0 1px rgba(0,0,0,0.08),
+                inset 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        /* Shadow under laptop */
+        .laptop-shadow {
+            width: 100%;
+            height: 30px;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, transparent 70%);
+            margin: 0 auto;
+            margin-top: 8px;
+        }
+
+        /* Decorative elements */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            z-index: -1;
+        }
+
+        .decoration-circle.large {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .decoration-circle.small {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        /* Floating badges */
+        .floating-badge {
+            position: absolute;
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1f2937;
+            z-index: 10;
+        }
+
+        .floating-badge.top-right {
+            top: -20px;
+            right: -30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-badge.bottom-left {
+            bottom: 200px;
+            left: -40px;
+            animation: float 3s ease-in-out infinite 1.5s;
+        }
+
+        .badge-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-icon svg {
+            width: 16px;
+            height: 16px;
+            color: white;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .marketing-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                max-width: 800px;
+            }
+
+            .content-side {
+                text-align: center;
+                align-items: center;
+            }
+
+            .headline {
+                font-size: 2.75rem;
+            }
+
+            .value-props {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 2.25rem;
+            }
+
+            .floating-badge {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="marketing-container">
+        <!-- Left side - Content -->
+        <div class="content-side">
+            <div class="brand">
+                <svg width="200" height="97" viewBox="0 0 160 68" class="logo-svg" role="img" aria-labelledby="logo-title">
+                        <title id="logo-title">BudgetByMe - Budget Life's Special Moments</title>
+                        <!-- Green circle background -->
+                        <circle cx="24" cy="24" r="22" fill="#059669"/>
+                        
+                        <!-- Letter "B" -->
+                        <path d="M16.8 14.4 L16.8 33.6 L24 33.6 Q28.8 33.6 28.8 28.8 Q28.8 24 24 24 L16.8 24 M16.8 24 L22.8 24 Q26.4 24 26.4 19.2 Q26.4 14.4 22.8 14.4 L16.8 14.4" fill="#F0FDF4" stroke="none"/>
+                        
+                        <!-- Progress bars -->
+                        <rect x="31.2" y="19.2" width="4.8" height="2.4" fill="#F0FDF4" rx="1.2"/>
+                        <rect x="31.2" y="24" width="7.2" height="2.4" fill="#F0FDF4" rx="1.2"/>
+                        <rect x="31.2" y="28.8" width="3.6" height="2.4" fill="#F0FDF4" rx="1.2"/>
+                        
+                        <!-- Text -->
+                        <text x="54" y="19.2" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#1F2937" letter-spacing="-0.025em">Budget</text>
+                        <text x="54" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#6B7280" letter-spacing="0.025em">By Me</text>
+                    </svg>
+
+            </div>
+
+            <h1 class="headline">
+                Budget Life's<br>
+                <span class="highlight">Special Moments</span>
+            </h1>
+
+            <div class="value-props">
+                <div class="value-prop">
+                    <div class="value-prop-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+                        </svg>
+                    </div>
+                    <div class="value-prop-content">
+                        <h3>Smart Payment Scheduling</h3>
+                        <p>Schedule vendor payments with ASAP, On-The-Day, or custom dates. Never miss a payment deadline again.</p>
+                    </div>
+                </div>
+
+                <div class="value-prop">
+                    <div class="value-prop-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                            <circle cx="12" cy="7" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="value-prop-content">
+                        <h3>Real-Time Budget Tracking</h3>
+                        <p>Visual dashboards show your budget health instantly. Track actual vs planned with professional precision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side - Laptop mockup -->
+        <div class="visual-side">
+            <div class="decoration-circle large"></div>
+            <div class="decoration-circle small"></div>
+
+            <div class="laptop-mockup">
+                <!-- Floating badges -->
+                <div class="floating-badge top-right">
+                    <div class="badge-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <span>Stay on Budget</span>
+                </div>
+
+                <div class="floating-badge bottom-left">
+                    <div class="badge-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <span>Plan with Ease</span>
+                </div>
+
+                <!-- Screen -->
+
+                 <div class="">
+                    <div class="">
+                        <img src="images/budgethealth-dashboard.png" alt="BudgetByMe Dashboard - Professional budget tracking for weddings and events" class="dashboard-image">
+                    </div>
+                </div>
+
+           
+      
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>

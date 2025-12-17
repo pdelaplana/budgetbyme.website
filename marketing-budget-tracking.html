@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetByMe - Real-Time Budget Tracking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #dcfce7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .marketing-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Left side - Text content */
+        .content-side {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .brand {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #1f2937;
+            letter-spacing: -0.03em;
+        }
+
+        .headline .highlight {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Value Props */
+        .value-props {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .value-prop {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(5, 150, 105, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-prop:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(5, 150, 105, 0.12);
+        }
+
+        .value-prop-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-prop-icon svg {
+            width: 28px;
+            height: 28px;
+            color: #059669;
+        }
+
+        .value-prop-content h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        .value-prop-content p {
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Right side - Visual */
+        .visual-side {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .laptop-mockup {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .dashboard-image {
+            max-width: 100%;
+        }
+
+        /* Decorative elements */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            z-index: -1;
+        }
+
+        .decoration-circle.large {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .decoration-circle.small {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .marketing-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                max-width: 800px;
+            }
+
+            .content-side {
+                text-align: center;
+                align-items: center;
+            }
+
+            .headline {
+                font-size: 2.75rem;
+            }
+
+            .value-props {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="brand">
+        <svg width="200" height="97" viewBox="0 0 160 68" class="logo-svg" role="img" aria-labelledby="logo-title">
+            <title id="logo-title">BudgetByMe - Budget Life's Special Moments</title>
+            <circle cx="24" cy="24" r="22" fill="#059669"/>
+            <path d="M16.8 14.4 L16.8 33.6 L24 33.6 Q28.8 33.6 28.8 28.8 Q28.8 24 24 24 L16.8 24 M16.8 24 L22.8 24 Q26.4 24 26.4 19.2 Q26.4 14.4 22.8 14.4 L16.8 14.4" fill="#F0FDF4" stroke="none"/>
+            <rect x="31.2" y="19.2" width="4.8" height="2.4" fill="#F0FDF4" rx="1.2"/>
+            <rect x="31.2" y="24" width="7.2" height="2.4" fill="#F0FDF4" rx="1.2"/>
+            <rect x="31.2" y="28.8" width="3.6" height="2.4" fill="#F0FDF4" rx="1.2"/>
+            <text x="54" y="19.2" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#1F2937" letter-spacing="-0.025em">Budget</text>
+            <text x="54" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#6B7280" letter-spacing="0.025em">By Me</text>
+        </svg>
+    </div>
+
+    <div class="marketing-container">
+        <!-- Left side - Content -->
+        <div class="content-side">
+            <h1 class="headline">
+                Real-Time<br>
+                <span class="highlight">Budget Tracking</span>
+            </h1>
+
+            <div class="value-props">
+                <div class="value-prop">
+                    <div class="value-prop-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                            <circle cx="12" cy="7" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="value-prop-content">
+                        <h3>See Your Budget Health Instantly</h3>
+                        <p>Visual dashboards with gauge charts show your budget status at a glance. Track actual vs planned spending with professional precision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side - Visual -->
+        <div class="visual-side">
+            <div class="decoration-circle large"></div>
+            <div class="decoration-circle small"></div>
+
+            <div class="laptop-mockup">
+                <!-- Screen -->
+                <div class="">
+                    <div class="">
+                        <img src="images/marketing/1.png" alt="BudgetByMe Dashboard - Real-time budget tracking with visual gauges" class="dashboard-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
